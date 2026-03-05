@@ -1,0 +1,48 @@
+type: PAGINATED #SIMPLE / PAGINATED
+update: NONE #NONE - не обновлять / обновление меню раз в ? секунд
+
+title: 'Главное меню (Страница %page%)'
+commands:
+  - 'menu'
+  - 'ьутг'
+  - 'меню'
+open_sound: BLOCK_BELL_USE
+close_sound: BLOCK_BELL_USE
+rows:
+  - 'bbbbbbbbb'
+  - 'booooooob'
+  - 'boooDooob'
+  - 'booooooob'
+  - 'bbbbbbbbb'
+
+items:
+    1: #страница
+      background:
+        material: gray_stained_glass_pane
+        amount: 1
+        name: "&7Silentium Project"
+        lore: []
+        action: []
+        mask: "b"
+
+      donate:
+        material: hdb-1555
+        amount: 1
+        name: "&7Silentium Project"
+        lore: []
+        action:
+          - "[menu] donate"
+        mask: "D"
+        requirements:
+          one:
+            type: PERMISSION
+            value: "menu.click.donate.1"
+          two:
+            type: RUBLES
+            value: 15
+          three:
+            type: MONEY
+            value: 150
+          four:
+            type: ITEM
+            value: ICE;20

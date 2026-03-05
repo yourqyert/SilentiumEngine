@@ -1,0 +1,54 @@
+# айди предмета (должен совпадать с названием файла)
+id: 'ak74'
+
+# предмет
+material: 'IRON_HOE'
+custom-model-data: 10001
+
+# имя и лор предмета (поддерживается мультиязычность, если уровневый - то снизу настраивать)
+display-name: '%engine_lang_item.ak74.name%'
+lore:
+  - '%engine_lang_item.ak74.lore_1%'
+  - ''
+  - '&8Калибр: 5.45x39мм'
+  - '&8Прочность: %durability% / %max_durability%'
+
+# атрибуты, можно ставить скорость пока в руке, урон и тд, для тяжелых оружий и артефактов
+attributes:
+  - 'generic.attack_damage;6.0;HAND'
+  - 'generic.attack_speed;-2.9;HAND'
+
+# работа с nbt, лучше не трогать если не знаешь
+nbt:
+  silentium_id: 'ak74'
+  is_weapon: true
+  ammo_type: '5.45x39'
+  durability: 1000
+  max_durability: 1000
+
+# ванильные настройки
+enchantments:
+  - 'unbreaking;3'
+item-flags:
+  - 'HIDE_ATTRIBUTES'
+  - 'HIDE_ENCHANTS'
+
+# уровневая система, источник опыта для прокачки оружия, формула уровня
+leveling:
+  max-level: 3
+  xp-source: 'MOB_KILL'
+  xp-formula: '%level% * 250'
+
+# настройки уровневой системы
+levels:
+  1:
+    display-name: '&fАК-74 &7[Ур. %level%]'
+  2:
+    display-name: '&fАК-74 &a+1 &7[Ур. %level%]'
+    attributes:
+      - 'generic.attack_damage;6.5;HAND'
+  3:
+    display-name: '&aАК-74М &7[Ур. %level%]'
+    custom-model-data: 10002 # меняем текстурку
+    attributes:
+      - 'generic.attack_damage;7.0;HAND'

@@ -1,0 +1,15 @@
+lang-name: 'Русский'
+prefix: '&7SilentiumEngine &8▸ &f'
+
+site: 'store.silentium.net'
+vk: 'vk.com/silentium_mc'
+discord: 'dsc.gg/silentium'
+server-ip: 'play.silentium.net'
+
+no-permission: '%prefix% У вас недостаточно прав для выполнения данного действия.'
+no-arguments: '%prefix% У вас недостаточно аргументов.'
+
+item:
+  ak74:
+    name: '&cAK-74'
+    lore_1: '&7Надежный автомат Калашникова.'

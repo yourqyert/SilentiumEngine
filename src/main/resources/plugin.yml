@@ -1,0 +1,49 @@
+name: SilentiumEngine
+version: '0.1.0-alpha'
+main: net.silentium.engine.SilentiumEngine
+api-version: '1.21'
+prefix: SEngine
+description: The engine for the S.T.A.L.K.E.R. game of the Silentium project
+
+load: STARTUP
+
+depend:
+  - ProtocolLib
+  - NBTAPI
+softdepend:
+  - Vault
+  - PlaceholderAPI
+  - HeadDatabase
+
+commands:
+  language:
+    description: Позволяет менять язык интерфейса у игрока.
+    aliases: [ lang ]
+    permission: silentium.command.language
+  giveitem:
+    description: Выдать кастомный предмет.
+    permission: silentium.command.giveitem
+  sengine:
+    description: Main command for SilentiumEngine.
+    aliases: [ se, silentium ]
+    permission: silentium.command.sengine
+
+permissions:
+  silentium.admin:
+    description: Grants access to all admin commands of SilentiumEngine.
+    default: op
+    children:
+      - silentium.command.giveitem
+      - silentium.admin.reload
+
+  silentium.command.language:
+    description: Allows player to change their language.
+    default: true
+
+  silentium.command.sengine:
+    description: Allows to use the main /sengine command.
+    default: op
+
+  silentium.admin.reload:
+    description: Allows to use /sengine reload.
+    default: op
